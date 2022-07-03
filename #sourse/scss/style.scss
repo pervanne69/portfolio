@@ -1,0 +1,367 @@
+
+// Обнуление
+
+@import "nullstyle.scss";
+
+// Подключение шрифтов
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+  url('../../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Gilroy-Regular.woff2') format('woff2'),
+  url('../../fonts/Gilroy-Regular.woff') format('woff'),
+  url('../../fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('../../fonts/Gilroy-Bold.eot');
+  src: local('Gilroy Bold'), local('Gilroy-Bold'),
+  url('../../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Gilroy-Bold.woff2') format('woff2'),
+  url('../../fonts/Gilroy-Bold.woff') format('woff'),
+  url('../../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('../../fonts/Gilroy-Medium.eot');
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+  url('../../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Gilroy-Medium.woff2') format('woff2'),
+  url('../../fonts/Gilroy-Medium.woff') format('woff'),
+  url('../../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+footer.footer {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+main.main {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+header.header {
+  background: #FFFFFF;
+  .header__body {
+    margin: 32.99px 0 84px 0;
+    display: flex;
+    flex-direction: column;
+    aside.header__navigation {
+      font-family: 'Gilroy-Bold', sans-serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 0 31.86px 0;
+      @media (max-width: 500px) {
+        display: none;
+      }
+      .header__item:first-child {
+        a {
+          color: #070707;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+      .header__item:not(:first-child) {
+        a {
+          font-size: 18px;
+          line-height: 22px;
+          color: #828282;
+        }
+      }
+    }
+    hr {
+      border-top: 1px solid #828282;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+    section.header__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 40px 0 30.64px 0;
+      @media (max-width: 500px) {
+        margin: 0 0 30.64px 0;
+      }
+      .header__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        @media (max-width: 500px) {
+          flex-direction: column;
+          row-gap: 23px;
+        }
+        .header__author {
+          font-family: 'Gilroy-Bold', sans-serif;
+          font-size: 47.3392px;
+          line-height: 59px;
+          color: #070707;
+          max-width: 123.51px;
+        }
+        .header__author-information {
+          font-family: 'Gilroy-Medium', sans-serif;
+          font-size: 18px;
+          line-height: 22px;
+          color: #070707;
+          max-width: 155.65px;
+        }
+        .header__language {
+          @media (max-width: 500px) {
+            display: none;
+          }
+        }
+      }
+      .header__burger.burger {
+        margin: 10px 0 0 0;
+        cursor: pointer;
+        @media (min-width: 501px) {
+          display: none;
+        }
+        .burger__logo {
+          display: flex;
+          flex-direction: column;
+          row-gap: 3.84px;
+          div {
+            width: 33px;
+            height: 3.84px;
+            background: #000000;
+          }
+          position: relative;
+          &::before, &::after {
+            content: "";
+            width: 33px;
+            height: 3.84px;
+            background: #000000;
+          }
+        }
+        .burger__items {
+          .burger__content {
+            font-family: 'Gilroy-Bold', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .burger__item:first-child {
+              a {
+                color: #070707;
+                font-size: 34px;
+                line-height: 42px;
+              }
+            }
+            .burger__item:not(:first-child) {
+              a {
+                font-size: 34px;
+                line-height: 42px;
+                color: #828282;
+              }
+            }
+          }
+          .burger__labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .burger__close {}
+            .burger__language {
+              font-size: 34px;
+              line-height: 42px;
+              span {}
+            }
+          }
+        }
+
+      }
+    }
+    .header__image {
+      position: relative;
+      padding: 43% 0 0 50%;
+      @media (max-width: 500px) {
+        padding: 60% 0;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @media (max-width: 500px) {
+          object-fit: fill;
+        }
+      }
+    }
+  }
+}
+
+section.about {
+  background: #F6F6F6;
+  .about__body {
+    padding: 120px 0 107px 0;
+    .about__title {}
+    .about__text {
+      max-width: 485px;
+      margin: 20px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      p {
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #070707;
+      }
+    }
+  }
+}
+
+section.skills {
+  .skills__body {
+    padding: 91px 0 105px 0;
+    .skills__title {
+      margin: 0 0 61px 0;
+    }
+    .skills__subtitle {
+      font-family: 'Gilroy-Medium', sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      color: #070707;
+      margin: 0 0 80px 0;
+
+    }
+    .skills__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 81px;
+      column-gap: 40px;
+      .skills__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+        flex-basis: 20%;
+        margin: 0 auto;
+        .skills__image {
+          position: relative;
+          padding: 40% 0 0 50%;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: contain;
+          }
+        }
+        .skills__image-title {
+          font-family: 'Gilroy-Bold', sans-serif;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          color: #828282;
+        }
+        .skills__stars {
+          img {}
+        }
+      }
+    }
+  }
+}
+
+
+.language {
+  display: flex;
+  justify-content: flex-end;
+  writing-mode: vertical-rl;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #828282;
+  span {
+    color: #000000;
+  }
+  @media (min-width: 501px) {
+    transform: scale(-1);
+  }
+}
+
+.title {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 34px;
+  line-height: 42px;
+  text-align: center;
+  color: #070707;
+}
+
+.burger__items-active {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 66px 28px 57px 26px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  z-index: 20;
+}
+.burger__items-passive {
+  display: none;
+}
+//@keyframes passive-display {
+//  0% {
+//    transform: scale(1, 1);
+//  }
+//  50% {
+//    transform: scale(0.5, 0.5);
+//  }
+//  100% {
+//    transform: scale(0);
+//    display: none;
+//  }
+//}
