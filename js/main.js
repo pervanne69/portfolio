@@ -9,18 +9,18 @@ const burgerItems = document.querySelector('.burger__items')
 const burgerContent = document.querySelector('.burger__content')
 
 burgerContent.querySelectorAll('.burger__item').forEach(el => {
-    el.addEventListener('click', e => {
+    el.addEventListener('click', () => {
         burgerItems.classList.add('burger__items-passive')
         burgerItems.classList.remove('burger__items-active')
     })
 })
 
-burgerCloseBtn.addEventListener('click', e => {
+burgerCloseBtn.addEventListener('click', () => {
     burgerItems.classList.add('burger__items-passive')
     burgerItems.classList.remove('burger__items-active')
 })
 
-burgerBtn.addEventListener('click', e => {
+burgerBtn.addEventListener('click', () => {
     burgerItems.classList.add('burger__items-active')
     burgerItems.classList.remove('burger__items-passive')
 })
